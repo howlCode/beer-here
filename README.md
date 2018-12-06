@@ -22,7 +22,7 @@ To run it on your local machine, follow these steps:
 Alternatively, you can pull down a docker image:  
 docker pull miromanyth/beer-here  
 and run it through docker using the command:  
-docker run -it -p 8080:8080 --rm --name beer-here
+docker run -it -p 8080:8080 --rm --name beer-here beer-here
 
 ## Future Plans
 
