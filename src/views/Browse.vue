@@ -127,9 +127,7 @@ export default {
         })
         .then((this.loading = false), (this.pageLoading = false))
         .catch(error => this.setError(error, "Something went wrong"));
-      if (this.bottomVisible()) {
-        this.addBeer();
-      }
+      
     },
     setError(error, text) {
       this.error =

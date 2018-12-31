@@ -49,17 +49,23 @@
                     </div>
                   </v-flex>
 
-                  <BeerData v-if="expanded" :beer="beer" />
+                  <!-- <BeerData v-if="expanded" :beer="beer" /> -->
                 </v-layout>
                 <v-card-actions>
-                  <v-btn
+                  <!-- <v-btn
                     @click="expanded = !expanded"
                     class="mx-4 hidden-sm-and-down"
                     large
                     block
                     color="yellow"
                     >Expanded Info</v-btn
-                  >
+                  > -->
+                  <BeerData 
+                    :beer="beer"
+                    :small=false
+                    :large=true
+                    class="hidden-sm-and-down"
+                  />
                   <v-btn
                     @click="showSocials = !showSocials"
                     class="mx-4 hidden-sm-and-down"
@@ -78,14 +84,21 @@
                     color="yellow"
                     >Pairing Tips</v-btn
                   >
-                  <v-btn
+                  <!-- <v-btn
                     small
                     class="hidden-md-and-up"
                     @click="expanded = !expanded"
                     block
                     color="yellow"
                     >More Info</v-btn
-                  >
+                  > -->
+                  <BeerData 
+                    :beer="beer"
+                    :small=true
+                    :large=false
+                    class="hidden-md-and-up mr-2"
+                    style="margin-left: -5px;"
+                  />
                   <v-btn
                     @click="showSocials = !showSocials"
                     small
@@ -129,7 +142,6 @@ export default {
       beer: [],
       error: "",
       loading: true,
-      expanded: false,
       showSocials: false
     };
   },
